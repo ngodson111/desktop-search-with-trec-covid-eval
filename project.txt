@@ -1,0 +1,8 @@
+Access the project through Guthub. Raw data is not included.
+1.	goto https://github.com/ngodson111/desktop-search-with-trec-covid-eval
+2.	pip install -r requirements.txt pyarrow
+3.	docker compose -f infra/docker-compose.yml up -d
+4.	python -m indexing.index documents/trec-covid --pattern="*.txt"
+5.	uvicorn searching.api:app --port 8000, then open http://localhost:8000
+6.	Run evaluation/evaluation.ipynb from inside the evaluation folder.
+Note: to run evaluation notebook we must have elastic search up, indexed and running
