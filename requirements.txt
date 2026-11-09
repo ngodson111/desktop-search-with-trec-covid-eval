@@ -1,0 +1,8 @@
+elasticsearch>=8.15,<9
+requests
+pypdf
+fastapi
+uvicorn
+jupyter
+pandas
+matplotlib

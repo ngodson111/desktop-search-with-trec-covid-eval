@@ -1,0 +1,3 @@
+Current development of COVID-19 diagnostics, vaccines and therapeutics
+
+Abstract A novel coronavirus, designated as SARS-CoV-2, first emerged in Wuhan City, Hubei Province, China, in late December 2019. The rapidly increasing number of cases has caused worldwide panic. In this review, we describe some currently applied diagnostic approaches, as well as therapeutics and vaccines, to prevent, treat and control further outbreaks of SARS-CoV-2 infection.

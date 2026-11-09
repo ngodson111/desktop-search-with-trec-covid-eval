@@ -1,0 +1,3 @@
+Elevated expression of ACE2 in tumor-adjacent normal tissues of cancer patients
+
+The rapidly developing COVID-19 pandemic has raised a concern that cancer patients may have increased susceptibility to SARS-CoV-2 infection. This discussion has mostly focused on therapy-induced immune suppression. Here, we examined the expression patterns of ACE2, the receptor through which SARX-CoV2 enters human cells, and found that ACE2 mRNA levels are elevated in tumor-adjacent normal tissues of cancer patients, including in normal-adjacent lung tissues of lung cancer patients. These observations raise the possibility that the elevated COVID-19 risk of cancer patients may not be limited to those undergoing immune-suppressing treatment.

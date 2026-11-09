@@ -1,0 +1,3 @@
+Coronavirus Perceptions And Economic Anxiety
+
+We provide one of the first systematic assessments of the development and determinants of economic anxiety at the onset of the coronavirus pandemic. Using a global dataset on internet searches and two representative surveys from the US, we document a substantial increase in economic anxiety during and after the arrival of the coronavirus. We also document a large dispersion in beliefs about the pandemic risk factors of the coronavirus, and demonstrate that these beliefs causally affect individuals' economic anxieties. Finally, we show that individuals' mental models of infectious disease spread understate non-linear growth and shape the extent of economic anxiety.

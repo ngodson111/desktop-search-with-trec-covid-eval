@@ -1,0 +1,3 @@
+SARS-CoV-2 detection from nasopharyngeal swab samples without RNA extraction
+
+The ongoing COVID-19 pandemic has reached more than 200 countries and territories worldwide. Given the large requirement of SARS-CoV-2 diagnosis and considering that RNA extraction kits are in short supply, we investigated whether two commercial RT-qPCR kits were compatible with direct SARS-CoV-2 detection from nasopharyngeal swab samples. We show that one of the tested kits is fully compatible with direct SARS-CoV-2 detection suggesting that omission of an RNA extraction step should be considered in SARS-CoV-2 diagnosis.

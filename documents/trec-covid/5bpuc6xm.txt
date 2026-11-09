@@ -1,0 +1,3 @@
+Alpha-1 antitrypsin inhibits SARS-CoV-2 infection
+
+Severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) causes coronavirus disease 2019 (COVID-19). To identify factors of the respiratory tract that suppress SARS-CoV-2, we screened a peptide/protein library derived from bronchoalveolar lavage, and identified α1-antitrypsin (α1-AT) as specific inhibitor of SARS-CoV-2. α1-AT targets the viral spike protein and blocks SARS-CoV-2 infection of human airway epithelium at physiological concentrations. Our findings show that endogenous α1-AT restricts SARS-CoV-2 and repurposes α1-AT-based drugs for COVID-19 therapy.

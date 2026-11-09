@@ -1,0 +1,3 @@
+Pros and cons of the application of evolutionary theories to the evolution of SARS-CoV-2
+
+The outbreak of severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) has caused severe damage to the world. With the support of classic evolutionary theories and population genetics principles, many studies on the origin of SARS-CoV-2 have revealed encouraging results but meanwhile some are still under debate. We are concerned with the validity of applying classic evolutionary theories and formula to the evolution of RNA viruses. We have raised several confounding factors like the RNA replication feature and the RNA modification systems of the hosts, which might jeopardize the validity of the application of classic methods to analyze the SARS-CoV-2 data.

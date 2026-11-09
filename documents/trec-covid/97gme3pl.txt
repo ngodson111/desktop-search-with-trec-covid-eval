@@ -1,0 +1,3 @@
+Phenotype of SARS-CoV-2-specific T-cells in COVID-19 patients with acute respiratory distress syndrome
+
+COVID-19 is associated with lymphopenia and cytokine storm, but no information is available on specific cellular immune responses to SARS-CoV-2. Here, we characterized SARS-CoV-2-specific CD4+ and CD8+ T-cells in patients with acute respiratory distress syndrome. The spike protein (S) proved a potent T-cell antigen and specific T-cells predominantly produced Th1 cytokines. These novel data are important in vaccine design and will facilitate evaluation of vaccine candidate immunogenicity.

@@ -1,0 +1,17 @@
+name: search-engine
+
+services:
+  elasticsearch:
+    build: ./elasticsearch
+    ports:
+      - "9200:9200"
+    volumes:
+      - es_data:/usr/share/elasticsearch/data
+
+  embedder:
+    build: ./embedder
+    ports:
+      - "11434:11434"
+
+volumes:
+  es_data:

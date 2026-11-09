@@ -1,0 +1,3 @@
+SARS-CoV-2 Infection and Cardiovascular Disease: COVID-19 Heart
+
+Coronavirus disease (COVID-19) is a serious illness caused by severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2). The symptoms of the disease range from asymptomatic to mild respiratory symptoms and even potentially life-threatening cardiovascular and pulmonary complications. Cardiac complications include acute myocardial injury, arrhythmias, cardiogenic shock and even sudden death. Furthermore, drug interactions with COVID-19 therapies may place the patient at risk for arrhythmias, cardiomyopathy and sudden death. In this review, we summarise the cardiac manifestations of COVID-19 infection and propose a simplified algorithm for patient management during the COVID-19 pandemic.

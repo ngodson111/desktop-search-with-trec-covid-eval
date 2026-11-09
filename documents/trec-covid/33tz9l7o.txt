@@ -1,0 +1,3 @@
+Asthma increases risk of severity of COVID-19.
+
+Current Centers for Disease Control and Prevention guidelines state that patients with moderate to severe asthma may be at greater risk for more severe disease if infected with SARS-CoV-2; however, no published data support this suggestion. During this pandemic, it is recommended that patients with asthma continue taking all controller inhalers and other asthma medication as prescribed to prevent exacerbations and limit outpatient clinic and emergency room exposure. Symptoms that may differentiate COVID-19 from asthma exacerbations caused by another trigger may include fever, fatigue, anorexia, or myalgias. Patients with suspected or confirmed COVID-19 should avoid nebulizer treatments due to the risk of aerosolization.

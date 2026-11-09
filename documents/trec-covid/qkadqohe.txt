@@ -1,0 +1,3 @@
+Tracking the onset date of the community spread of SARS-CoV-2 in Western Countries
+
+The SARS-CoV-2 rapidly spread around the world during 2020, but the precise time in which the virus began to spread locally is currently unknown for most countries. Here, we estimate the probable onset date of the community spread of SARS-CoV-2 from the cumulative number of deaths reported during the early stage of the epidemic in Western Europe and the Americas. Our results support that SARS-CoV-2 probably started to spread locally in all western countries analyzed between the middle of January and early February 2020, thus long before community transmission was officially recognized and control measures were implemented.

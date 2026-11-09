@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document Search</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #f4f5f7;
+      color: #222;
+    }
+
+    h1 {
+      margin-top: 0;
+    }
+
+    form {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+
+    input {
+      flex: 1;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 4px;
+      background: #2f6fde;
+      color: white;
+      cursor: pointer;
+    }
+
+    .columns {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .column {
+      background: white;
+      border-radius: 6px;
+      padding: 12px;
+    }
+
+    .column h2 {
+      margin: 0 0 12px;
+      font-size: 18px;
+    }
+
+    .result {
+      border-top: 1px solid #eee;
+      padding: 10px 0;
+    }
+
+    .rank {
+      font-weight: bold;
+      font-size: 18px;
+      margin-right: 6px;
+    }
+
+    .path {
+      font-weight: bold;
+      word-break: break-all;
+      color: #2f6fde;
+    }
+
+    .full-path {
+      color: #888;
+      font-size: 12px;
+      word-break: break-all;
+    }
+
+    .score {
+      color: #888;
+      font-size: 12px;
+    }
+
+    .snippet {
+      font-size: 13px;
+      color: #555;
+      margin-top: 4px;
+    }
+
+    .empty {
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <h1>Document Search</h1>
+
+  <form id="search-form">
+    <input id="query" placeholder="Type your search..." required>
+    <button type="submit">Search</button>
+  </form>
+
+  <div class="columns">
+    <div class="column">
+      <h2>BM25</h2>
+      <div id="bm25"></div>
+    </div>
+    <div class="column">
+      <h2>Vector</h2>
+      <div id="vector"></div>
+    </div>
+    <div class="column">
+      <h2>Reranked</h2>
+      <div id="reranked"></div>
+    </div>
+  </div>
+
+  <script>
+    const API_URL = "";
+    const MODES = ["bm25", "vector", "reranked"];
+
+    function showResults(mode, results) {
+      const box = document.getElementById(mode);
+
+      if (results.length === 0) {
+        box.innerHTML = '<p class="empty">No results</p>';
+        return;
+      }
+
+      box.innerHTML = "";
+      for (const result of results) {
+        const div = document.createElement("div");
+        div.className = "result";
+        div.innerHTML = `
+          <span class="rank">#${result.rank}</span>
+          <a class="path"></a>
+          <div class="full-path"></div>
+          <div class="score">score: ${result.score}</div>
+          <div class="snippet"></div>
+        `;
+        const link = div.querySelector(".path");
+        link.textContent = result.path.split("/").pop();
+        link.href = `${API_URL}/download?path=${encodeURIComponent(result.path)}`;
+        div.querySelector(".full-path").textContent = result.path;
+        div.querySelector(".snippet").textContent = result.snippet + "...";
+        box.appendChild(div);
+      }
+    }
+
+    async function search(mode, query) {
+      document.getElementById(mode).innerHTML = '<p class="empty">Searching...</p>';
+      const response = await fetch(`${API_URL}/search/${mode}?query=${encodeURIComponent(query)}`);
+      const data = await response.json();
+      showResults(mode, data.results);
+    }
+
+    document.getElementById("search-form").addEventListener("submit", (event) => {
+      event.preventDefault();
+      const query = document.getElementById("query").value;
+      for (const mode of MODES) {
+        search(mode, query);
+      }
+    });
+  </script>
+</body>
+</html>

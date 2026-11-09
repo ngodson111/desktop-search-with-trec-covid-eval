@@ -1,0 +1,3 @@
+Probable Molecular Mechanism of Remdesivir for the Treatment of COVID-19: Need to Know More
+
+COVID-19 is now pandemic throughout the world. Scientist, doctors are searching for effective therapy of this diseases. The remdesivir, an antiviral drug, is appeared as 'molecule of hope' for the treatment of this disease. USFDA gave emergency approval to this drug for the treatment of COVID-19. The molecular mechanism is unknown. In this paper, we tried to describe the probable molecular mechanism of remdesivir to inhibit the RNA synthesis of SARS-CoV-2. However, more detail mechanism is needed to understand mechanism of action of remdesivir.
