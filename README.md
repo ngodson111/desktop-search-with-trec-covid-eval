@@ -38,42 +38,94 @@ git clone https://github.com/ngodson111/desktop-search-with-trec-covid-eval.git
 cd desktop-search-with-trec-covid-eval
 ```
 
-**2. Install the Python packages**
+**2. Set up Python**
+
+Create a virtual environment (a private folder for this project's packages):
 
 ```bash
 python3 -m venv venv
-source venv/bin/activate        # Windows: venv\Scripts\activate
+```
+
+Activate it. You should then see `(venv)` at the start of the terminal line:
+
+```bash
+source venv/bin/activate
+```
+
+On Windows use `venv\Scripts\activate` instead.
+
+Install the packages:
+
+```bash
 pip install -r requirements.txt
 ```
 
-**3. Start Elasticsearch and the embedding model**
+**3. Set up Docker**
+
+Download and install Docker Desktop from https://www.docker.com/products/docker-desktop/,
+then open it and wait until it says it is running.
+
+Check it works:
+
+```bash
+docker --version
+```
+
+Start Elasticsearch and the embedding model:
 
 ```bash
 docker compose -f infra/docker-compose.yml up -d
 ```
 
 The first start downloads the images and the model, so it takes a few minutes.
-Check it is ready: `curl localhost:9200` should return JSON.
 
-**4. Build the search index**
+Check they are ready:
+
+```bash
+curl localhost:9200
+```
+
+You should get a JSON answer back.
+
+**4. Index the documents**
+
+This is a desktop search engine, so it searches a folder of files. The project already
+includes one: `documents/trec-covid/` holds 1,453 COVID-19 papers as `.txt` files. We index
+that folder:
 
 ```bash
 python -m indexing.index documents/trec-covid --pattern="*.txt"
 ```
 
-This takes several minutes. Check with `curl localhost:9200/documents/_count` – it should say
-`"count":1453`.
+It reads every file, cuts it into chunks, turns the chunks into vectors and stores them in
+Elasticsearch. This takes several minutes.
 
-Optional flags: `--pattern="*.pdf"`, `--depth=2`, `--from 2026-01-01` (only files created on
-or after that date). You can point it at any folder, for example `~/Documents`.
+Check that all files are in:
 
-**5. Start the search page**
+```bash
+curl localhost:9200/documents/_count
+```
+
+It should say `"count":1453`.
+
+To search your own files instead, point it at any folder, for example
+`python -m indexing.index ~/Documents --pattern="*.pdf"`. Other flags: `--depth=2` (how deep
+to go into sub-folders) and `--from 2026-01-01` (only files created on or after that date).
+
+**5. Start the search engine**
 
 ```bash
 uvicorn searching.api:app --reload --port 8000
 ```
 
-Open http://localhost:8000, type a question and press Search. Click a file name to download it.
+Open the web app in your browser:
+
+http://localhost:8000
+
+Type a question, for example *what are the initial symptoms of Covid-19*, and press Search.
+You get three columns: BM25, Vector and Reranked (hybrid). Click a file name to download it.
+
+Press Ctrl+C in the terminal to stop it.
 
 **6. Run the evaluation (optional)**
 
